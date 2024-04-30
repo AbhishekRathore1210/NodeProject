@@ -1,10 +1,14 @@
 const home = async(req,res)=>{
     try {   
-        return res.end('<h1>This is Home Page</h1>');
+        return res.render('home',{
+            title:"HOME"
+        });
         
     } catch (error) {
         console.log(error.message);
     }
 }
 
-module.exports = home;
+module.exports = {
+    home
+}
